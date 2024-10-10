@@ -36,8 +36,10 @@ const Portfolio: React.FC = () => {
   }, []);
 
   return (
-    <div className="container mx-auto">
-      <h1 className="text-4xl font-bold mb-6 text-center mt-8">My Projects</h1>
+    <section className="container mx-auto">
+      <h2 className="text-center text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-600 mb-8">
+       My Project
+      </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-12 gap-6">
         {projects.length > 0 ? (
           projects.map((project) => (
@@ -57,7 +59,7 @@ const Portfolio: React.FC = () => {
           <p className="text-center text-white">Loading projects...</p>
         )}
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -2,14 +2,13 @@
 import React, { useEffect, useState } from "react";
 import ToolCard from "./ToolCard";
 
-// Define the interface for a tool object
 interface Tool {
   name: string;
   imageSrc: string;
 }
 
 const Tools = () => {
-  // Explicitly type tools as an array of Tool objects
+  
   const [tools, setTools] = useState<Tool[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -56,7 +55,8 @@ const Tools = () => {
   if (error) return <p>{error}</p>;
 
   return (
-    <div className="max-w-6xl mx-auto py-10">
+    <section className="max-w-6xl mx-auto py-10">
+    
       <h2 className="text-center text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-600 mb-8">
         Programming Languages and Tools
       </h2>
@@ -66,7 +66,7 @@ const Tools = () => {
           <ToolCard key={index} tool={tool.name} imageSrc={tool.imageSrc} />
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

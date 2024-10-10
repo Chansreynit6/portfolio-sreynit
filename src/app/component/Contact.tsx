@@ -2,11 +2,11 @@ import React from 'react';
 
 function Contact() {
   return (
-    <section className="flex justify-center items-center p-16 bg-black mt-12">
-      <div className="flex max-w-screen-xl w-full bg-black rounded-lg overflow-hidden">
+    <section className="flex justify-center items-center p-16 bg-[#121212] mt-12">
+      <div className="flex max-w-screen-xl w-full bg-[#121212] rounded-lg overflow-hidden">
         {/* Left Section */}
-        <div className="flex-1 p-10 border-r border-red-500 text-center ">
-          <h1 className="text-5xl mb-5 font-bold text-yellow-500 ">CONTACT</h1>
+        <div className="flex-1 p-10 text-center  ">
+          <h1 className="text-5xl mb-5 font-bold  text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-600 ">CONTACT</h1>
           <p className="mb-10 text-lg text-gray-300 leading-relaxed">
             I’m excited to connect and explore new opportunities! If you have a project idea, need advice,
             or want to discuss the latest in web development, please reach out using the form below or email me directly.
@@ -33,7 +33,7 @@ function Contact() {
 
         {/* Right Section */}
         <div className="flex-1 p-10 text-center flex flex-col justify-center">
-          <h1 className="text-5xl mb-5 font-bold">CONTACT FORM</h1>
+          <h1 className="text-5xl mb-5 font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-600">CONTACT FORM</h1>
           <form action="#" method="post" className="flex flex-col mb-14">
             <div className="mb-7">
               <input
@@ -66,7 +66,7 @@ function Contact() {
             </div>
             <button
               type="submit"
-              className="bg-yellow-500 text-black py-4 rounded-lg text-lg cursor-pointer transition duration-300 hover:bg-gray-300"
+              className="bg-yellow-500 text-black w-[515px] ml- py-2 rounded-lg text-lg cursor-pointer transition duration-300 hover:bg-gray-300"
             >
               Send Message
             </button>
