@@ -15,7 +15,7 @@ export default function Home() {
         <About />
         <Skill/>
         <Project/>
-        <Contact/>
+        <Contact />
         
         
         </div>

@@ -14,7 +14,7 @@ function About() {
           width={350}
           height={100}
           alt="About Image"
-          className="sm:ml-[80px] rounded-lg mr-[80px] mt-8 " 
+          className="sm:ml-[80px] rounded-lg mr-[80px] mt-8 "
         />
 
         <div className=" sm:mr-[50px] mr-[5x] mt-8">
@@ -32,9 +32,43 @@ function About() {
             projects that make a difference!
           </p>
           <div className="flex items-center flex-row mt-16 space-x-5">
-            <FaGithub className="w-[40px] h-[40px] " />
-            <FaFacebook className="w-[40px] h-[40px]" />
-            <FaTelegram className="w-[40px] h-[40px]" />
+            
+
+            <div>
+              <a
+                href="https://github.com/Chansreynit6"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaGithub className="w-[40px] h-[40px] " />
+              </a>
+            </div>
+
+
+
+            <div>
+              <a
+                href="https://www.facebook.com/zey.nit.524?mibextid=LQQJ4d"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaFacebook className="w-[40px] h-[40px]" />
+              </a>
+            </div>
+            <div>
+              <a
+                href="https://t.me/Sreynitngoun"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+               <FaTelegram className="w-[40px] h-[40px]" />
+              </a>
+            </div>
+
+
+
+
+            
             <FaPhoneAlt className="w-[40px] h-[35px]" />
           </div>
         </div>
