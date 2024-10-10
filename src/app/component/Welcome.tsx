@@ -2,6 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
+import Link from 'next/link';
 
 const Welcome = () => {
   return (
@@ -34,8 +35,8 @@ const Welcome = () => {
           <p className="text-[#ADB7BE] lg:text-xl mt-3 text-base sm:text-lg">
           I’m a passionate front-end developer with a strong foundation in creating clean, responsive, and user-friendly web interfaces. 
            </p>
-          <div className="flex space-x-4 mt-8">
-            <button className="bg-gradient-to-br from-blue-700 via-purple-700 to-pink-600  from-primary-400 to-secondary-600 text-white px-8 py-3 rounded-full hover:from-secondary-600 hover:to-primary-400 transition-all">
+          <div className="flex space-x-4 mt-8 ">
+            <button  className="bg-gradient-to-br from-blue-700 via-purple-700 to-pink-600  from-primary-400 to-secondary-600 text-white px-8 py-3 rounded-full hover:from-secondary-600 hover:to-primary-400 transition-all">
               Hire Me
             </button>
             <button className="text-white border border-white px-6 py-3 rounded-full hover:bg-pink-600 transition-all">

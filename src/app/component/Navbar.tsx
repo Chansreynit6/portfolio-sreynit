@@ -16,7 +16,7 @@ const Navbar = () => {
               <a href="#portfolio" className="text-white hover:text-purple-500">Portfolio</a>
             </li>
             <li>
-              <a href="#contact" className="text-white hover:text-ppurple-500">Contact</a>
+              <a href="#name" className="text-white hover:text-ppurple-500">Contact</a>
             </li>
           </ul>
         </nav>
