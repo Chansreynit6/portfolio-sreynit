@@ -32,8 +32,6 @@ function About() {
             projects that make a difference!
           </p>
           <div className="flex items-center flex-row mt-16 space-x-5">
-            
-
             <div>
               <a
                 href="https://github.com/Chansreynit6"
@@ -43,9 +41,6 @@ function About() {
                 <FaGithub className="w-[40px] h-[40px] " />
               </a>
             </div>
-
-
-
             <div>
               <a
                 href="https://www.facebook.com/zey.nit.524?mibextid=LQQJ4d"
@@ -61,14 +56,9 @@ function About() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-               <FaTelegram className="w-[40px] h-[40px]" />
+                <FaTelegram className="w-[40px] h-[40px]" />
               </a>
             </div>
-
-
-
-
-            
             <FaPhoneAlt className="w-[40px] h-[35px]" />
           </div>
         </div>

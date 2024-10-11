@@ -26,3 +26,24 @@ body {
     text-wrap: balance;
   }
 }
+/* src/styles/globals.css */
+
+/* Default Light Theme Styles */
+:root {
+  --background: white; /* Light mode background */
+  --foreground: black; /* Light mode text color */
+}
+
+/* Dark Theme Styles */
+.dark {
+  --background: #1a1a1a; /* Dark mode background */
+  --foreground: white; /* Dark mode text color */
+}
+
+/* Apply the background and text colors globally */
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  transition: background-color 0.5s ease, color 0.5s ease; /* Smooth transition */
+}
+

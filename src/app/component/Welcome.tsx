@@ -32,7 +32,7 @@ const Welcome = () => {
           repeat={Infinity}
           />
           </h1>
-          <p className="text-[#ADB7BE] lg:text-xl mt-3 text-base sm:text-lg">
+          <p className="text-white lg:text-xl mt-3 text-base sm:text-lg">
           I’m a passionate front-end developer with a strong foundation in creating clean, responsive, and user-friendly web interfaces. 
            </p>
           <div className="flex space-x-4 mt-8 ">
