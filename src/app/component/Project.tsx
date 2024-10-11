@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState, useEffect } from "react";
 
 // Define the Project interface
@@ -15,16 +15,22 @@ const Portfolio: React.FC = () => {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const response = await fetch("http://localhost:1337/api/projects?populate=*");
+        const response = await fetch(
+          "http://localhost:1337/api/projects?populate=*"
+        );
         const result = await response.json();
 
         // Map the API response to match the Project interface
-        const formattedProjects: Project[] = result.data.map((project: any) => ({
-          id: project.id,
-          title: project.title,
-          description: project.description,
-          imageSrc: project.image ? `http://localhost:1337${project.image.url}` : "/default.jpg",
-        }));
+        const formattedProjects: Project[] = result.data.map(
+          (project: any) => ({
+            id: project.id,
+            title: project.title,
+            description: project.description,
+            imageSrc: project.image
+              ? `http://localhost:1337${project.image.url}`
+              : "/default.jpg",
+          })
+        );
 
         setProjects(formattedProjects);
       } catch (error) {
@@ -37,13 +43,16 @@ const Portfolio: React.FC = () => {
 
   return (
     <section className="container mx-auto mt-8">
-      <h2 className="text-center text-4xl  text-white font-bold  mb-8">
-       My Project
+      <h2 className="text-center text-4xl text-white font-bold mb-8">
+        My Project
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-12 gap-6">
         {projects.length > 0 ? (
           projects.map((project) => (
-            <div key={project.id} className="bg-pink rounded-lg shadow-lg  mr-10 sm:mr-4">
+            <div
+              key={project.id}
+              className="bg-pink rounded-lg shadow-lg mr-10 sm:mr-4 transform transition-transform duration-300 hover:scale-105" // Added hover scale
+            >
               <img
                 src={project.imageSrc}
                 alt={project.title}

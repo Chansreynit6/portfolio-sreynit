@@ -14,7 +14,7 @@ function Cardabout() {
           </div>
           <div>
             <h3 className="text-lg text-white font-semibold">Education</h3>
-            <p className="text-sm text-white">
+            <p className="text-sm font-siz text-white">
               I am studying Fullstack Development and focusing on technologies
               like React, Next.js, and Tailwind CSS.
             </p>

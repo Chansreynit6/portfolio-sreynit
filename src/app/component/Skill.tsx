@@ -8,7 +8,6 @@ interface Tool {
 }
 
 const Tools = () => {
-  
   const [tools, setTools] = useState<Tool[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -55,13 +54,12 @@ const Tools = () => {
   if (error) return <p>{error}</p>;
 
   return (
-    <section className="max-w-6xl mx-auto py-10">
-    
+    <section className="max-w-6xl mx-auto py-10 ">
       <h2 className="text-center text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-600 mb-8">
         Programming Languages and Tools
       </h2>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 ">
         {tools.map((tool, index) => (
           <ToolCard key={index} tool={tool.name} imageSrc={tool.imageSrc} />
         ))}
