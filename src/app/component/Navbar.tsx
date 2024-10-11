@@ -15,7 +15,7 @@ const Navbar = () => {
           {/* Centered Menu */}
           <ul className="flex space-x-8 mx-auto">
             <li>
-              <a href="#home" className="text-white hover:text-purple-500">
+              <a href="#home" className="text-white hover:text-purple-500 ">
                 Home
               </a>
             </li>

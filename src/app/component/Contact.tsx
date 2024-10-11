@@ -1,5 +1,5 @@
-"use client"
-import React from 'react';
+"use client";
+import React from "react";
 
 function Contact() {
   async function handleSubmit(e) {
@@ -34,9 +34,10 @@ function Contact() {
             CONTACT
           </h1>
           <p className="mb-10 text-base md:text-lg text-gray-300 leading-relaxed">
-            I’m excited to connect and explore new opportunities! If you have a project idea, need advice, 
-            or want to discuss the latest in web development, please reach out using the form below or email me directly. 
-            I’ll get back to you as soon as possible!
+            I’m excited to connect and explore new opportunities! If you have a
+            project idea, need advice, or want to discuss the latest in web
+            development, please reach out using the form below or email me
+            directly. I’ll get back to you as soon as possible!
           </p>
           <ul className="list-none p-0">
             <h3 className="text-lg md:text-xl mb-2">Address</h3>
