@@ -43,15 +43,6 @@ function About() {
             </div>
             <div>
               <a
-                href="https://www.facebook.com/zey.nit.524?mibextid=LQQJ4d"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaFacebook className="w-[40px] h-[40px]" />
-              </a>
-            </div>
-            <div>
-              <a
                 href="https://t.me/Sreynitngoun"
                 target="_blank"
                 rel="noopener noreferrer"
