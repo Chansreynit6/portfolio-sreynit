@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Link from "next/link";
 
 // Define the Project interface
 interface Project {
@@ -7,27 +8,38 @@ interface Project {
   title: string;
   description: string;
   imageSrc: string;
+  link: string;
 }
 
 // Hardcoded project data
 const projects: Project[] = [
   {
     id: 1,
-    title: "Project One",
+    title: "Minimal Blog",
     description: "This is the first project description.",
-    imageSrc: "/project1.jpg",
+    imageSrc: "/minimal.jpg",
+    link: "https://minimal-blog-beryl.vercel.app/",
   },
   {
     id: 2,
-    title: "Projeo",
+    title: "Selling Bicycle",
     description: "This is the second project description.",
-    imageSrc: "/project2.jpg",
+    imageSrc: "/bicycle.jpg",
+    link: "https://limsopheak16.github.io/Selling-Bicycle/",
   },
   {
     id: 3,
-    title: "Project Three",
+    title: "Weather Forecast",
     description: "This is the third project description.",
-    imageSrc: "/project3.jpg",
+    imageSrc: "/weather.png",
+    link: "https://pp-weather-azure.vercel.app/",
+  },
+  {
+    id: 4,
+    title: "Blog Post",
+    description: "This is the fourth project description.",
+    imageSrc: "/blog.png",
+    link: "https://blogpost-one-rho.vercel.app/",
   },
 ];
 
@@ -35,24 +47,23 @@ const Portfolio: React.FC = () => {
   return (
     <section className="container mx-auto mt-8">
       <h2 className="text-center text-4xl text-white font-bold mb-8">
-        My Project
+        My Projects
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-12 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mt-12 gap-6">
         {projects.map((project) => (
-          <div
-            key={project.id}
-            className="bg-pink rounded-lg shadow-lg mr-10 sm:mr-4 transform transition-transform duration-300 hover:scale-105"
-          >
-            <img
-              src={project.imageSrc}
-              alt={project.title}
-              className="w-[400px] h-[250px] ml-8 object-cover rounded-t-lg"
-            />
-            <h2 className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-600 mt-4 ml-8">
-              {project.title}
-            </h2>
-            <p className="mt-2 ml-8 text-white">{project.description}</p>
-          </div>
+          <Link key={project.id} href={project.link} target="_blank" rel="noopener noreferrer">
+            <div className="bg-pink rounded-lg shadow-lg mr-10 sm:mr-4 transform transition-transform duration-300 hover:scale-105 cursor-pointer">
+              <img
+                src={project.imageSrc}
+                className="w-[400px] h-[250px] ml-8 object-cover rounded-t-lg"
+                alt={project.title}
+              />
+              <h2 className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-600 mt-4 ml-8">
+                {project.title}
+              </h2>
+              <p className="mt-2 ml-8 text-white">{project.description}</p>
+            </div>
+          </Link>
         ))}
       </div>
     </section>

@@ -11,19 +11,51 @@ interface Tool {
 const tools: Tool[] = [
   {
     name: "JavaScript",
-    imageSrc: "/javascript-logo.png",
+    imageSrc: "/js.jpg",
   },
   {
-    name: "TypeScript",
-    imageSrc: "/typescript-logo.png",
+    name: "Bootstrap",
+    imageSrc: "/bootstrap.webp",
   },
   {
-    name: "React",
-    imageSrc: "/react-logo.png",
+    name: "CSS",
+    imageSrc: "/css.webp",
   },
   {
-    name: "Node.js",
-    imageSrc: "/nodejs-logo.png",
+    name: "Figma",
+    imageSrc: "/figma.webp",
+  },
+  {
+    name: "Github",
+    imageSrc: "/github.webp",
+  },
+  {
+    name: "HTML",
+    imageSrc: "/html.webp",
+  },
+  {
+    name: "Postgres",
+    imageSrc: "/postgres.png",
+  },
+  {
+    name: "Postman",
+    imageSrc: "/postman.webp",
+  },
+  {
+    name: "Reacit",
+    imageSrc: "/reacit.webp",
+  },
+  {
+    name: "Strapi",
+    imageSrc: "/strapi.jpg",
+  },
+  {
+    name: "Tailwind",
+    imageSrc: "/tailwind.webp",
+  },
+  {
+    name: "NextJs",
+    imageSrc: "/nextjs.jpeg",
   },
 ];
 
