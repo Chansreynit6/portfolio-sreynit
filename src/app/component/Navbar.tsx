@@ -3,21 +3,12 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 
 const Navbar = () => {
-  const [isDark, setIsDark] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme") || "light";
-    setIsDark(savedTheme === "dark");
     document.documentElement.classList.toggle("dark", savedTheme === "dark");
   }, []);
-
-  const toggleTheme = () => {
-    const newTheme = isDark ? "light" : "dark";
-    setIsDark(!isDark);
-    localStorage.setItem("theme", newTheme);
-    document.documentElement.classList.toggle("dark", newTheme === "dark");
-  };
 
   return (
     <nav className="bg-black-900 shadow-md w-full">

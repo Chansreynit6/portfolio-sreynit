@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 // Define the Project interface
 interface Project {
@@ -58,10 +59,12 @@ const Portfolio: React.FC = () => {
             rel="noopener noreferrer"
           >
             <div className="bg-pink rounded-lg shadow-lg mx-auto sm:mr-4 transform transition-transform duration-300 hover:scale-105 cursor-pointer w-full max-w-[350px] sm:max-w-none">
-              <img
+              <Image
                 src={project.imageSrc}
-                className="w-full h-[200px] sm:h-[250px] object-cover rounded-t-lg"
                 alt={project.title}
+                width={350} // Set appropriate width
+                height={250} // Set appropriate height
+                className="w-full h-[200px] sm:h-[250px] object-cover rounded-t-lg"
               />
               <div className="p-4 sm:ml-4">
                 <h2 className="text-lg sm:text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-600">

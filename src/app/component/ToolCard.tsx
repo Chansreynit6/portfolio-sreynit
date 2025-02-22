@@ -1,15 +1,22 @@
-import React from "react";
+import Image from "next/image";
 
 interface ToolCardProps {
   tool: string;
   imageSrc: string;
 }
 
-const ToolCard: React.FC<ToolCardProps> = ({ tool, imageSrc }) => {
+const ToolCard = ({ tool, imageSrc }: ToolCardProps) => {
   return (
-    <div className="p-4 bg-black-600 rounded-lg shadow-md text-white flex flex-col items-center justify-center space-y-6 border border-white">
-      <img src={imageSrc} alt={tool} className="w-16 h-16" />
-      <p className="text-xl font-bold">{tool}</p>
+    <div className="flex flex-col items-center">
+      {/* Add width and height here */}
+      <Image
+        src={imageSrc}
+        alt={tool}
+        width={100}   // Example width, adjust as needed
+        height={100}  // Example height, adjust as needed
+        className="w-full h-full object-contain"
+      />
+      <h3 className="text-center mt-2">{tool}</h3>
     </div>
   );
 };

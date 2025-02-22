@@ -2,8 +2,9 @@
 import React from "react";
 
 function Contact() {
-  async function handleSubmit(e: { preventDefault: () => void; target: { name: { value: any; }; email: { value: any; }; message: { value: any; }; }; }) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    const form = e.currentTarget;
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
       headers: {
@@ -12,9 +13,9 @@ function Contact() {
       },
       body: JSON.stringify({
         access_key: "cc7b7303-711c-4db0-ae53-db458849051d",
-        name: e.target.name.value,
-        email: e.target.email.value,
-        message: e.target.message.value,
+        name: (form.elements.namedItem("name") as HTMLInputElement)?.value,
+        email: (form.elements.namedItem("email") as HTMLInputElement)?.value,
+        message: (form.elements.namedItem("message") as HTMLTextAreaElement)?.value,
       }),
     });
     const result = await response.json();
@@ -41,24 +42,23 @@ function Contact() {
           </p>
           <ul className="list-none p-0">
             <h3 className="text-base md:text-lg lg:text-xl mb-2">Address</h3>
-             <li className="text-white mb-7">
-              <i className="fas fa-map-marker-alt mr-2"></i>
+            <li className="text-white mb-7">
+              <i className="fa-solid fa-map-marker-alt mr-2"></i>
               Toul Kork, Phnom Penh, Cambodia
             </li>
             <h3 className="text-base md:text-lg lg:text-xl mb-2">Phone Number</h3>
             <li className="text-white mb-7">
-              <i className="fas fa-phone mr-2"></i>
-              +885 98 902 37
+              <i className="fa-solid fa-phone mr-2"></i>
+              +855 98 902 37
             </li>
             <h3 className="text-base md:text-lg lg:text-xl mb-2">Email</h3>
             <li className="text-white mb-7">
-              <i className="fas fa-envelope mr-2"></i>
+              <i className="fa-solid fa-envelope mr-2"></i>
               chansreynit.ngoun@institute.pse.ngo
             </li>
           </ul>
         </div>
 
-       
         <div className="flex-1 p-4 sm:p-6 md:p-10 text-center flex flex-col justify-center">
           <h1 className="text-3xl sm:text-4xl md:text-5xl mb-5 font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-600">
             CONTACT FORM
