@@ -2,7 +2,7 @@
 import React from "react";
 
 function Contact() {
-  async function handleSubmit(e) {
+  async function handleSubmit(e: { preventDefault: () => void; target: { name: { value: any; }; email: { value: any; }; message: { value: any; }; }; }) {
     e.preventDefault();
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
@@ -28,7 +28,7 @@ function Contact() {
   return (
     <section className="flex justify-center items-center p-4 sm:p-6 md:p-16 bg-[#121212] mt-8 sm:mt-12 border border-white">
       <div className="flex flex-col md:flex-row max-w-screen-xl w-full bg-[#121212] rounded-lg overflow-hidden">
-        {/* Left Section */}
+       
         <div className="flex-1 p-4 sm:p-6 md:p-10 text-center">
           <h1 className="text-3xl sm:text-4xl md:text-5xl mb-5 font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-600">
             CONTACT
@@ -58,7 +58,7 @@ function Contact() {
           </ul>
         </div>
 
-        {/* Right Section */}
+       
         <div className="flex-1 p-4 sm:p-6 md:p-10 text-center flex flex-col justify-center">
           <h1 className="text-3xl sm:text-4xl md:text-5xl mb-5 font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-600">
             CONTACT FORM
