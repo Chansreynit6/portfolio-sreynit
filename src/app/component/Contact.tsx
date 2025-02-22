@@ -1,35 +1,47 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 
 function Contact() {
+  const [successMessage, setSuccessMessage] = useState<string | null>(null); // State for success message
+  const [errorMessage, setErrorMessage] = useState<string | null>(null); // State for error message
+
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify({
-        access_key: "cc7b7303-711c-4db0-ae53-db458849051d",
-        name: (form.elements.namedItem("name") as HTMLInputElement)?.value,
-        email: (form.elements.namedItem("email") as HTMLInputElement)?.value,
-        message: (form.elements.namedItem("message") as HTMLTextAreaElement)?.value,
-      }),
-    });
-    const result = await response.json();
-    if (result.success) {
-      console.log(result);
-    } else {
-      console.error(result);
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "cc7b7303-711c-4db0-ae53-db458849051d",
+          name: (form.elements.namedItem("name") as HTMLInputElement)?.value,
+          email: (form.elements.namedItem("email") as HTMLInputElement)?.value,
+          message: (form.elements.namedItem("message") as HTMLTextAreaElement)?.value,
+        }),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setSuccessMessage("Your message was sent successfully!");
+        setErrorMessage(null); // Reset error message if submission is successful
+      } else {
+        setErrorMessage("Oops! Something went wrong.");
+        setSuccessMessage(null); // Reset success message if submission fails
+      }
+    } catch (error) {
+      setErrorMessage("There was an error with the submission.");
+      setSuccessMessage(null); // Reset success message if there's an error
     }
   }
 
   return (
     <section className="flex justify-center items-center p-4 sm:p-6 md:p-16 bg-[#121212] mt-8 sm:mt-12 border border-white">
       <div className="flex flex-col md:flex-row max-w-screen-xl w-full bg-[#121212] rounded-lg overflow-hidden">
-       
         <div className="flex-1 p-4 sm:p-6 md:p-10 text-center">
           <h1 className="text-3xl sm:text-4xl md:text-5xl mb-5 font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-600">
             CONTACT
@@ -100,6 +112,14 @@ function Contact() {
               Send Message
             </button>
           </form>
+
+          {/* Display success or error message */}
+          {successMessage && (
+            <p className="text-white mt-4">{successMessage}</p>
+          )}
+          {errorMessage && (
+            <p className="text-red-500 mt-4">{errorMessage}</p>
+          )}
         </div>
       </div>
     </section>
