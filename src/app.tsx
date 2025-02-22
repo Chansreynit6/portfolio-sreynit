@@ -1,4 +1,4 @@
-// src/pages/_app.tsx
+
 
 import '../styles/globals.css'; // Import global styles
 import { useEffect } from 'react';

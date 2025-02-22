@@ -51,7 +51,7 @@ function Contact() {
               <i className="fa-solid fa-phone mr-2"></i>
               +855 98 902 37
             </li>
-            <h3 className="text-base md:text-lg lg:text-xl mb-2">Email</h3>
+            <h3 className="text-base md:text-lg lg:text-xl mb-2 text-white">Email</h3>
             <li className="text-white mb-7">
               <i className="fa-solid fa-envelope mr-2"></i>
               chansreynit.ngoun@institute.pse.ngo
