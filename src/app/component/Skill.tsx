@@ -14,8 +14,12 @@ const tools: Tool[] = [
     imageSrc: "/js.jpg",
   },
   {
-    name: "Bootstrap",
-    imageSrc: "/bootstrap.webp",
+    name: "Strapi",
+    imageSrc: "/strapi.jpg",
+  },
+  {
+    name: "HTML",
+    imageSrc: "/html.webp",
   },
   {
     name: "CSS",
@@ -30,10 +34,6 @@ const tools: Tool[] = [
     imageSrc: "/github.webp",
   },
   {
-    name: "HTML",
-    imageSrc: "/html.webp",
-  },
-  {
     name: "Postgres",
     imageSrc: "/postgres.png",
   },
@@ -42,16 +42,16 @@ const tools: Tool[] = [
     imageSrc: "/postman.webp",
   },
   {
-    name: "Reacit",
+    name: "React",
     imageSrc: "/reacit.webp",
-  },
-  {
-    name: "Strapi",
-    imageSrc: "/strapi.jpg",
   },
   {
     name: "Tailwind",
     imageSrc: "/tailwind.webp",
+  },
+  {
+    name: "Bootstrap",
+    imageSrc: "/bootstrap.webp",
   },
   {
     name: "NextJs",

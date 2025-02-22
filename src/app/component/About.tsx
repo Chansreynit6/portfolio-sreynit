@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import { FaGithub } from "react-icons/fa6";
-import { FaFacebook } from "react-icons/fa";
 import { FaTelegram } from "react-icons/fa6";
 import { FaPhoneAlt } from "react-icons/fa";
 
@@ -10,7 +9,7 @@ function About() {
     <section>
       <div className=" text-white md:grid md:grid-cols-2 gap-8 py-8 px-4 xl:gap-16 sm:py-16 mr-10">
         <Image
-          src="/aboutme.jpg"
+          src="/about.jpg"
           width={350}
           height={100}
           alt="About Image"

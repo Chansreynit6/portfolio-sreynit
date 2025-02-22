@@ -22,13 +22,12 @@ const Navbar = () => {
   return (
     <nav className="bg-black-900 shadow-md w-full">
       <div className="max-w-6xl mx-auto flex items-center justify-between py-4 px-6">
-        {/* Logo or Brand */}
         <div className="text-white text-xl font-bold">MyPortfolio</div>
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-8 text-white">
           <li><Link href="#home" className="hover:text-purple-500">Home</Link></li>
-          <li><Link href="#about" className="hover:text-purple-500">About</Link></li>
+          <li><Link href="#About" className="hover:text-purple-500">About</Link></li>
           <li><Link href="#portfolio" className="hover:text-purple-500">Project</Link></li>
           <li><Link href="#contact" className="hover:text-purple-500">Contact</Link></li>
         </ul>

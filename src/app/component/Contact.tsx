@@ -26,76 +26,76 @@ function Contact() {
   }
 
   return (
-    <section className="flex justify-center items-center p-6 sm:p-12 md:p-16 bg-[#121212] mt-12 border border-white">
+    <section className="flex justify-center items-center p-4 sm:p-6 md:p-16 bg-[#121212] mt-8 sm:mt-12 border border-white">
       <div className="flex flex-col md:flex-row max-w-screen-xl w-full bg-[#121212] rounded-lg overflow-hidden">
         {/* Left Section */}
-        <div className="flex-1 p-6 sm:p-10 text-center">
-          <h1 className="text-4xl md:text-5xl mb-5 font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-600">
+        <div className="flex-1 p-4 sm:p-6 md:p-10 text-center">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl mb-5 font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-600">
             CONTACT
           </h1>
-          <p className="mb-10 text-base md:text-lg text-gray-300 leading-relaxed">
-            I’m excited to connect and explore new opportunities! If you have a
+          <p className="mb-6 md:mb-10 text-sm md:text-base lg:text-lg text-gray-300 leading-relaxed">
+            I'm excited to connect and explore new opportunities! If you have a
             project idea, need advice, or want to discuss the latest in web
             development, please reach out using the form below or email me
-            directly. I’ll get back to you as soon as possible!
+            directly. I'll get back to you as soon as possible!
           </p>
           <ul className="list-none p-0">
-            <h3 className="text-lg md:text-xl mb-2">Address</h3>
-            <li className="text-white mb-7">
+            <h3 className="text-base md:text-lg lg:text-xl mb-2">Address</h3>
+             <li className="text-white mb-7">
               <i className="fas fa-map-marker-alt mr-2"></i>
               Toul Kork, Phnom Penh, Cambodia
             </li>
-            <h3 className="text-lg md:text-xl mb-2">Phone Number</h3>
+            <h3 className="text-base md:text-lg lg:text-xl mb-2">Phone Number</h3>
             <li className="text-white mb-7">
               <i className="fas fa-phone mr-2"></i>
-              +885 86 393 830
+              +885 98 902 37
             </li>
-            <h3 className="text-lg md:text-xl mb-2">Email</h3>
+            <h3 className="text-base md:text-lg lg:text-xl mb-2">Email</h3>
             <li className="text-white mb-7">
               <i className="fas fa-envelope mr-2"></i>
-              chansreynit.ngoun@gmail.com
+              chansreynit.ngoun@institute.pse.ngo
             </li>
           </ul>
         </div>
 
         {/* Right Section */}
-        <div className="flex-1 p-6 sm:p-10 text-center flex flex-col justify-center">
-          <h1 className="text-4xl md:text-5xl mb-5 font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-600">
+        <div className="flex-1 p-4 sm:p-6 md:p-10 text-center flex flex-col justify-center">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl mb-5 font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-600">
             CONTACT FORM
           </h1>
-          <form onSubmit={handleSubmit} className="flex flex-col mb-14">
-            <div className="mb-7">
+          <form onSubmit={handleSubmit} className="flex flex-col mb-8 md:mb-14">
+            <div className="mb-4 md:mb-7">
               <input
                 type="text"
                 name="name"
                 id="name"
                 placeholder="Your Name"
                 required
-                className="w-full md:w-11/12 p-4 border border-gray-300 rounded bg-black text-white focus:outline-none"
+                className="w-full md:w-11/12 p-3 md:p-4 border border-gray-300 rounded bg-black text-white focus:outline-none"
               />
             </div>
-            <div className="mb-7">
+            <div className="mb-4 md:mb-7">
               <input
                 type="email"
                 name="email"
                 id="email"
                 placeholder="Your Email"
                 required
-                className="w-full md:w-11/12 p-4 border border-gray-300 rounded bg-black text-white focus:outline-none"
+                className="w-full md:w-11/12 p-3 md:p-4 border border-gray-300 rounded bg-black text-white focus:outline-none"
               />
             </div>
-            <div className="mb-7">
+            <div className="mb-4 md:mb-7">
               <textarea
                 name="message"
                 id="message"
                 placeholder="Your Message"
                 required
-                className="w-full md:w-11/12 p-4 border border-gray-300 rounded bg-black text-white focus:outline-none resize-none h-40"
+                className="w-full md:w-11/12 p-3 md:p-4 border border-gray-300 rounded bg-black text-white focus:outline-none resize-none h-32 md:h-40"
               ></textarea>
             </div>
             <button
               type="submit"
-              className="bg-pink-600 text-white w-full md:w-[515px] py-2 text-lg ml-0 md:ml-6 rounded-lg cursor-pointer transition duration-300 hover:bg-gray-300"
+              className="bg-pink-600 text-white w-full md:w-[515px] py-2 text-base md:text-lg rounded-lg cursor-pointer transition duration-300 hover:bg-gray-300 md:ml-6"
             >
               Send Message
             </button>
