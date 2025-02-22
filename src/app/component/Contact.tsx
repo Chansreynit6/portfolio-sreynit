@@ -35,10 +35,10 @@ function Contact() {
             CONTACT
           </h1>
           <p className="mb-6 md:mb-10 text-sm md:text-base lg:text-lg text-gray-300 leading-relaxed">
-            I'm excited to connect and explore new opportunities! If you have a
+            I am excited to connect and explore new opportunities! If you have a
             project idea, need advice, or want to discuss the latest in web
             development, please reach out using the form below or email me
-            directly. I'll get back to you as soon as possible!
+            directly. I will get back to you as soon as possible!
           </p>
           <ul className="list-none p-0">
             <h3 className="text-base md:text-lg lg:text-xl mb-2">Address</h3>

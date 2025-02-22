@@ -12,7 +12,7 @@ const Welcome = () => {
         <div className="col-span-12 lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left">
           <h1 className="text-white text-xl sm:text-4xl lg:text-5xl font-extrabold leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-600">
-              Hello, I'm <br />
+              Hello, I&apos;m <br />
             </span>
             <TypeAnimation
               sequence={["Sreynit", 1000, "Fullstack Developer", 1000]}
@@ -23,9 +23,10 @@ const Welcome = () => {
             />
           </h1>
           <p className="text-white text-sm sm:text-lg lg:text-xl mt-4 sm:mt-2 max-w-md px-4 sm:px-0">
-            I'm a passionate front-end developer with a strong foundation in
-            creating clean, responsive, and user-friendly web interfaces.
+            I&apos;m a passionate front-end developer with a strong foundation
+            in creating clean, responsive, and user-friendly web interfaces.
           </p>
+
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row justify-center lg:justify-start space-y-3 sm:space-y-0 sm:space-x-4 mt-6 w-full sm:w-auto">
             <Link href="/contact">
