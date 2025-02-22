@@ -4,10 +4,12 @@ import React, { useState } from "react";
 function Contact() {
   const [successMessage, setSuccessMessage] = useState<string | null>(null); // State for success message
   const [errorMessage, setErrorMessage] = useState<string | null>(null); // State for error message
+  const [loading, setLoading] = useState(false); // Loading state for the form submission
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
+    setLoading(true); // Show loading state
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
@@ -28,14 +30,17 @@ function Contact() {
 
       if (result.success) {
         setSuccessMessage("Your message was sent successfully!");
-        setErrorMessage(null); // Reset error message if submission is successful
+        setErrorMessage(null);
       } else {
         setErrorMessage("Oops! Something went wrong.");
-        setSuccessMessage(null); // Reset success message if submission fails
+        setSuccessMessage(null); 
       }
     } catch (error) {
+      console.error(error); // Log the error for debugging
       setErrorMessage("There was an error with the submission.");
-      setSuccessMessage(null); // Reset success message if there's an error
+      setSuccessMessage(null); 
+    } finally {
+      setLoading(false); // Hide loading state after submission is complete
     }
   }
 
@@ -109,7 +114,7 @@ function Contact() {
               type="submit"
               className="bg-pink-600 text-white w-full md:w-[515px] py-2 text-base md:text-lg rounded-lg cursor-pointer transition duration-300 hover:bg-gray-300 md:ml-6"
             >
-              Send Message
+              {loading ? "Sending..." : "Send Message"}
             </button>
           </form>
 
