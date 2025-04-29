@@ -19,16 +19,14 @@ function About() {
         <div className=" sm:mr-[50px] mr-[5x] mt-8">
           <h2 className="text-4xl font-bold ">About Me</h2>
           <p className=" text-base lg:text-lg mt-4 ">
-            Hello! I’m Sreynit, a passionate front-end developer with a knack
-            for creating clean and responsive web interfaces. With a solid
-            foundation in HTML, CSS, and JavaScript, I thrive on using modern
-            frameworks like React to build dynamic and user-friendly
-            applications. My goal is to deliver exceptional user experiences
-            while continuously learning and expanding my skill set in the
-            ever-evolving tech landscape. When I’m not coding, I enjoy exploring
-            new technologies and staying updated with the latest industry
-            trends. I’m excited to connect and collaborate on innovative
-            projects that make a difference!
+          Hello! I’m Sreynit, a passionate front-end developer who loves crafting clean, 
+          responsive, and dynamic web interfaces. I specialize in using modern technologies 
+          like Bootstrap, Tailwind CSS, React, and Next.js to create engaging and user-friendly 
+          websites. With a strong eye for design and experience using Figma, I focus on delivering
+           seamless user experiences. I also have a solid understanding of backend and database
+            tools like PostgreSQL, MySQL, MongoDB, and Strapi, giving me a broader perspective
+             on full web development. I’m always eager to learn, grow, and build innovative
+              projects that make a real impact
           </p>
           <div className="flex items-center flex-row mt-16 space-x-5">
             <div>

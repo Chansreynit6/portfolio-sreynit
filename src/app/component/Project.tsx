@@ -37,10 +37,10 @@ const projects: Project[] = [
   },
   {
     id: 4,
-    title: "Blog Post",
-    description: "A place where users can post anything they like and share their ideas with others",
-    imageSrc: "/blog.png",
-    link: "https://blogpost-one-rho.vercel.app/",
+    title: "My Movie",
+    description: "A movie website where users can explore, discover, and enjoy information about various films",
+    imageSrc: "/movie.png",
+    link: "https://mymovie-7s3z.vercel.app/",
   },
 ];
 
@@ -48,7 +48,7 @@ const Portfolio: React.FC = () => {
   return (
     <section className="container mx-auto px-4 sm:px-6 mt-8">
       <h2 className="text-center text-3xl sm:text-4xl text-white font-bold mb-8">
-        My Projects
+        MY PROJECTS
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mt-8 sm:mt-12 gap-4 sm:gap-6">
         {projects.map((project) => (
